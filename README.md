@@ -1,8 +1,20 @@
 
 # code_everyday_challenge_100
-![logo noob to pro](/noob_to_pro_front_end_dev_logo.png "logo noob to pro")
+<div>
+   <img width= "200px"; src="/noob_to_pro_front_end_dev_logo.png"  >  
+</div>   
 
+
+## Introduction  
 I created this repository to improve html css and especially javascript.
-For that I gave myself 100 challenges to do in 100 days.
+For that I gave myself 100 challenges to do in 100 days.  
+.  
+.  
+.  
 
-![heirachy folder](/file_hierarchy.jpeg "heirachy folder")
+
+## Heirarchy folder
+.  
+.  
+.  
+<img src="/file_hierarchy.jpeg" height="300px">  
