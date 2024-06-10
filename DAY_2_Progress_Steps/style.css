@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --this_blue : rgb(83, 136, 216);
+    --this_gray : #ebebeb;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapper{
+    margin: auto;
+    height: fit-content;
+    width: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+.progress_bar{
+    width: 19rem;
+    position: relative;
+}
+
+/* **********css for number*********** */
+
+.circle_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle {
+    height: 2rem;
+    width: 2rem;
+    border: solid var(--this_gray);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.circle_active {
+    border-color: var(--this_blue);
+}
+
+.circle_wrapper em{
+    font-style: normal;
+}
+
+.circle_wrapper{
+    display: flex;
+
+}
+
+
+/* ***********css for the progress bar*********** */
+.tubes_wrapper{
+    z-index: -1;
+    position: absolute; 
+    top: 45%;
+    width: 100%;
+    background-color: var(--this_gray);
+
+}
+
+
+.full_tubes{
+    background-color: var(--this_blue);
+    width: 35%; /*the width should take only this 4 values : 0%  35%  70% 100% */
+    height: 3px;
+    transition: 400ms;
+}
+
+
+/* ***********css for botton*********** */
+
+.controller {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.controller input{
+    background-color: var(--this_blue);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    width: 5rem;
+    height: 1.9rem;
+}
