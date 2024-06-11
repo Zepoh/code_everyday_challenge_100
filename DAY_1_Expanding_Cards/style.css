@@ -45,13 +45,13 @@ body {
 
 .panel.active{
     flex:5;
-    border: solid 5px rgb(212, 163, 56); /*  */
 }
 
 
 .panel.active h3{
     opacity: 1;
-   
+    transition: 400ms;
+    transition-delay: 0.4s;
 }
 
 @media(max-width: 500px){
