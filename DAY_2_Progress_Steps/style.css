@@ -6,7 +6,7 @@
 
 :root{
     --this_blue : rgb(83, 136, 216);
-    --this_gray : #ebebeb;
+    --this_gray : #b3b3b3;
 }
 
 body {
@@ -53,6 +53,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: white;
+    transition: 400ms;
 }
 
 .circle_active {
@@ -88,7 +89,7 @@ body {
 }
 
 
-/* ***********css for botton*********** */
+/* ***********css for button*********** */
 
 .controller {
     display: flex;
@@ -96,10 +97,14 @@ body {
 }
 
 .controller input{
-    background-color: var(--this_blue);
+    background-color: var(--this_gray);
     border: none;
     color: white;
     border-radius: 5px;
     width: 5rem;
     height: 1.9rem;
+}
+
+.controller input.button_active{
+    background-color: var(--this_blue);
 }
