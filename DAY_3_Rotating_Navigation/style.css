@@ -46,6 +46,33 @@ body {
     bottom: 1rem;
 }
 
+
+.menu_option{
+    position: fixed;
+    z-index: 0;
+    bottom: 5rem;
+    left: 2rem;
+    transform: skew(20deg);
+    translate: -10rem 0;
+    transition: 800ms;
+}
+
+.menu_option_opened{
+    translate: 0 0;
+}
+
+.menu_option > div{
+    transform: skew(-20deg);
+    margin: 1rem;
+}
+
+.menu_option a, .menu_option i {
+    color: white;
+    text-decoration: none;
+    
+}
+
+
 .body_content{
     background-color: rgb(247, 247, 247);
     width: 100%;
