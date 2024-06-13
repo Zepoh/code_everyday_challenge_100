@@ -14,4 +14,43 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background-color: rgb(106, 92, 189);
+}
+
+.body_content {
+    background-color: white;
+    font-size: .5rem;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+}
+    
+
+.body_content input{
+    border: none;
+    background-color: inherit;
+    width: 0rem;
+    padding: 0rem;
+    height: inherit;
+    transition: 400ms;
+}
+
+.body_content .input_expanded{
+    width: 9rem;
+    padding: 1rem;
+}
+
+
+
+.body_content .find_icon{
+   width: 2rem;
+   height: inherit;
+   background-color: antiquewhite;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.body_content .find_icon i{
+    scale: 180%;
 }
