@@ -32,14 +32,15 @@ body {
     width: 0rem;
     padding: 0rem;
     height: inherit;
-    transition: 400ms;
+    transition: 400ms ease;
+    font-size: 14px;
+    outline: none;
 }
 
 .body_content .input_expanded{
     width: 9rem;
     padding: 1rem;
 }
-
 
 
 .body_content .find_icon{
@@ -49,6 +50,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   cursor: pointer;
 }
 
 .body_content .find_icon i{
