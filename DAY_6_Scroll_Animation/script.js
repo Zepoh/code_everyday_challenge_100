@@ -1,6 +1,6 @@
 const card = document.querySelectorAll(".content_wrapper div")
 
-// initialize 
+// initialize the position
 manager_card()
 
 window.addEventListener('scroll',()=>{
