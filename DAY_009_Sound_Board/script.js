@@ -13,5 +13,6 @@ audio_s.forEach(element => {
 function stop_all() {
     audio_s.forEach(element => {
         element.children[0].pause()
+        element.children[0].currentTime = 0;
     });
 }
