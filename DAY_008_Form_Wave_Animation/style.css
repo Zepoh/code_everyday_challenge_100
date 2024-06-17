@@ -53,53 +53,20 @@ form h2{
 form label{
     position: relative;
     top: 2.5rem;
-    /* transition: 400ms; */
-    /* border: solid black .1rem; */
 }
-
-/* form .active{
-    top: 0rem;
-} */
-
-
 
 form label span{
     display: inline-block;
     position: relative;
-
-    /***************by using amimation keyframe***********/
-    /* animation: go_down 400ms ease-in-out  1 ;
-    animation-fill-mode: forwards; */
-
-    /* *************by using css transition************* */
     transform: translateY(0rem);
-    transition: 400ms ease-in-out;
+    transition: 400ms;
+    transition-timing-function: cubic-bezier(0.855, 0.005, 0.280, 1.465);
 }
 
 form label .active_span{
     color: var(--lighten_blue);
-
-    /***************by using amimation keyframe***********/
-    /* animation: go_up 400ms ease-in-out  1 ;
-    animation-fill-mode: forwards; */
-
-    /* *************by using css transition************* */
     transform: translateY(-2.5rem);
 }
-
-@keyframes go_up{
-    0%{transform: translateY(0rem);}
-    75%{transform: translateY(-2.9rem);}
-    100%{transform: translateY(-2.5rem);}
-}
-@keyframes go_down{
-    0%{transform: translateY(-2.5rem);}
-    75%{transform: translateY(.4rem);}
-    100%{transform: translateY(0rem);}
-}
-
-
-
 
 form input {
     color: white;
