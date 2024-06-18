@@ -1,6 +1,5 @@
 const   body_content = document.querySelector(".body_content")
 
-
 document.addEventListener("keydown", (event)=>{
     if (body_content.children.length == 1) {
         body_content.innerHTML = ""  //to remove the entire content of body_content
@@ -8,13 +7,11 @@ document.addEventListener("keydown", (event)=>{
         create_card_wrapper("event.keyCode", event.keyCode)
         create_card_wrapper("event.code", event.code)
     }else{
-        console.log(body_content.children[0].children[1].children[0].innerHTML);
         body_content.children[0].children[1].children[0].innerHTML = event.key 
         body_content.children[1].children[1].children[0].innerHTML = event.keyCode 
         body_content.children[2].children[1].children[0].innerHTML = event.code 
     }
 })
-
 
 function create_card_wrapper(titre, value) {
     let card_wrapper =  document.createElement("div")
