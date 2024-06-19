@@ -45,6 +45,7 @@ body {
     color: white;
     cursor: pointer;
     padding: 1rem;
+    border: none;
     border-radius: inherit;
 }
 

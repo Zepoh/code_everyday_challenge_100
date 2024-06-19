@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -14,4 +17,65 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background-color: rgb(231, 231, 231);
 }
+
+h1{
+    margin: 2rem;
+}
+
+.question_wapper {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.question{
+    position: relative;
+    background-color: transparent;  
+    border: .1rem solid rgb(167, 165, 165);
+    border-radius: .5rem;
+    padding: 2rem;
+    height: 5rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: 400ms;
+}
+
+
+.question h2{
+    font-size: 1rem;
+}
+.question p{
+    display: none;
+}
+.question .image{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.8rem;
+}
+
+.image svg{
+
+    fill: black;
+    height: 1.5rem;
+    width: 2rem;
+}
+
+/* **********style for expanded version*************** */
+.active{
+    background-color: white; 
+    height: 8rem;
+    box-shadow: .0rem .2rem .2rem rgba(0, 0, 0, 0.26);
+}
+
+.active p{
+    display: initial;
+    font-size: .9rem;
+}
+
+
+
