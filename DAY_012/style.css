@@ -68,6 +68,10 @@ h1{
 /* **********style for expanded version*************** */
 .active{
     background-color: white; 
+    background-image: url("./asset/image/bulle.png");
+    background-repeat: no-repeat;
+    background-size: 8rem;
+    background-position: -1rem -1rem;
     height: 8rem;
     box-shadow: .0rem .2rem .2rem rgba(0, 0, 0, 0.26);
 }
