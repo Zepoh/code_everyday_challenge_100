@@ -26,31 +26,61 @@ body {
 }
 
 nav{
+    padding: .5rem 1.5rem;
     background-color: white;
+    box-shadow: 0rem .2rem .3rem rgba(0, 0, 0, 0.39);
+
+}
+
+.nav_content{
     width: fit-content;
-    padding: 1rem 1.5rem;
+    height: 2rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
-    margin: 0rem;
-    transition: 400ms;
+    margin: auto;
+    transition: 800ms;
 }
 
 .link_wrapper{
     margin-right: 0rem;
+    transition: inherit;
 }
 
 .active{
     margin-right: -15rem;
+    /* transform: rotateY(80deg); */
+
 }
 
 .link_wrapper a{
+    transition: inherit;
+    display: inline-block;
     margin: 0 .3rem;
     color: black;
     text-decoration: none;
-    background-color: bisque;
 }
+
+.active a{
+    transform: rotateY(450deg);
+    opacity: 0;
+}
+
 
 .nav_image{
     margin: 0 .5rem ;
+    height: inherit;
+    width: 2.5rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
 }
+
+.nav_image::before {
+    content: "<div></div><div></div>"
+}
+  
