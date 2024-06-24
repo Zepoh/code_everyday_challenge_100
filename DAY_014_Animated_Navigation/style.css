@@ -4,6 +4,7 @@
 :root{
     --blue_light : rgb(201, 240, 253);
     --blue_dark : rgb(45, 137, 243);
+    --transition_time : 800ms;
 }
 
 
@@ -40,7 +41,7 @@ nav{
     align-items: center;
     gap: 1rem;
     margin: auto;
-    transition: 800ms;
+    transition: var(--transition_time);
 }
 
 .link_wrapper{
@@ -48,21 +49,21 @@ nav{
     transition: inherit;
 }
 
-.active{
+.active .link_wrapper{
     margin-right: -15rem;
     /* transform: rotateY(80deg); */
 
 }
 
 .link_wrapper a{
-    transition: inherit;
+    transition: var(--transition_time);
     display: inline-block;
     margin: 0 .3rem;
     color: black;
     text-decoration: none;
 }
 
-.active a{
+.active .link_wrapper a{
     transform: rotateY(450deg);
     opacity: 0;
 }
@@ -77,10 +78,21 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: bisque;
+    gap: .4rem;
 }
 
-.nav_image::before {
-    content: "<div></div><div></div>"
+.nav_image > div{ 
+    width:1.5rem;
+    height: 2px;
+    background-color: var(--blue_dark);
+    transform: rotateZ(0deg);
+    transition: var(--transition_time);
 }
-  
+
+.active .nav_image > div:first-child{
+    transform: rotateZ(360deg);
+}
+
+.active .nav_image > div:last-child{
+    transform: rotateZ(-360deg);
+}
