@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --duration_of_animation: 400ms;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    background-image: url("./asset/image1.jpg");
+    background-position: 50% 50%;
+    background-size: 100vw;
+}
+
+.body_content{
+    height: inherit;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.726);
+}
+
+.wrapper{
+    opacity: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.control{
+    height: 4rem;
+    aspect-ratio: 1;
+    border: solid orange .1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control p {
+    font-size: 3rem;
+    user-select: none;
+}
+
+.image {
+    height: 50vh;
+    aspect-ratio: 2;
+    background-image: url("./asset/image1.jpg");
+    background-position: center;
+    background-size: 100vw;
+   
+}
+
+@keyframes fondu_progressive {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes aggradissement_progressif {
+    from {
+        background-position: 50% 45%;
+    }
+    to {
+        background-position:center;
+
+    }
+}
+
+.animation {
+    animation: ease-out 0s  aggradissement_progressif;
+    animation-duration: var(--duration_of_animation);
+}
+
+.animation .image{
+    animation:  ease-out 0s  fondu_progressive;
+    animation-duration: var(--duration_of_animation);
+    
+}
+ 
