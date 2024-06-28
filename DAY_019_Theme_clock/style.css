@@ -1,0 +1,162 @@
+:root{
+    --thickness_of_the_hand : .2rem;
+    --color_light :rgb(245, 245, 245);
+    --color_dark : rgb(53, 53, 53);
+    --color_gray : rgb(168, 168, 168);
+    --color_accent : red;
+    --transition_time: 800ms
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color_light);
+    transition: var(--transition_time);
+}
+
+.body_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color_light);
+    background-color: var(--color_dark);
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    margin: 5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition_time);
+}
+
+h2:active{
+    scale: 95%;
+}
+
+.clock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.analog{
+    position: relative;
+    height: 15rem;
+    margin: 2rem;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.axe{
+    z-index: 1;
+    height: .8rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--color_dark);
+    border: solid var(--color_accent) .15rem;
+}
+
+.hand{
+    position: absolute;
+    height: var(--thickness_of_the_hand);
+    left: 50%;
+    transform-origin: 0 50%;
+    background-color: var(--color_dark);
+    /* transition: var(--transition_time); */
+    transition: none;
+}
+
+.hour_hand{
+    width: 6rem;
+    height: calc(var(--thickness_of_the_hand) + .2rem);
+}
+
+.minute_hand{
+    width: 10rem;
+}
+
+.second_hand{
+    background-color: var(--color_accent);
+    width: 11rem;
+    transform: rotate(-84deg);
+}
+
+.digital{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time{
+    font-size: 2.5rem;
+    color: var(--color_dark);
+    transition: var(--transition_time);
+}
+
+.date{
+    font-size: .8rem;
+    color: var(--color_gray);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.wrapper_day_in_the_month{
+    background-color: var(--color_dark);
+    height: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ******************👇👇dark mode👇👇*************** */
+.dark_mode{
+    background-color: var(--color_dark);
+}
+.dark_mode h2{
+    color: var(--color_dark);
+    background-color: var(--color_light);
+}
+.dark_mode .axe{
+    background-color: var(--color_light);
+}
+.dark_mode .hand{
+    background-color: var(--color_light);
+}
+.dark_mode .second_hand{
+    background-color: var(--color_accent);
+}
+.dark_mode .wrapper_day_in_the_month{
+    background-color: var(--color_light);
+}
+.dark_mode .time{
+    color: var(--color_light);
+}
+.dark_mode .wrapper_day_in_the_month span{
+    color: var(--color_dark);
+}
+/* *****************👆👆dark mode👆👆************* */

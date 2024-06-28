@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day 19 Theme clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark_mode">
+    <div class="body_content">
+      <h2 onclick="toggle_dark_mode()">Dark mode</h2>
+      <div class="clock">
+        <div class="analog">
+          <div class="axe"></div>
+          <div class="hour_hand hand"></div>
+          <div class="minute_hand hand"></div>
+          <div class="second_hand hand"></div>
+        </div>
+        <div class="digital">
+          <p class="time">
+            <span class="hour">13</span>
+            <span>h</span>
+            <span class="min">36</span>
+            <span class="meridiem">PM</span>
+          </p>
+          <div class="date">
+            <p>
+              <span class="day_in_the_week">monday</span>
+            </p>
+            <p>
+              <span>,</span>
+            </p>
+            <p>
+              <span class="month">nov</span>
+            </p>
+            <p class="wrapper_day_in_the_month">
+              <span class="day_in_the_month">2</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
