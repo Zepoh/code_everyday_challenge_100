@@ -1,0 +1,63 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;
+}
+
+.body_content{
+    width: fit-content;
+}
+
+.button{
+    overflow: hidden;
+    position: relative;
+}
+
+.ripple_div{
+    position: absolute;
+    bottom: 2rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0;
+    height: 1rem;
+    aspect-ratio: 1;
+}
+
+.active .ripple_div{
+    animation: ripple 400ms ease-out  1  ;
+    /* direction fill-mode */
+}
+
+@keyframes ripple {
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(20);
+    }
+}
+
+input[type=button]{
+    background-color: rgb(168, 43, 226);
+    padding: 1rem 2rem ;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
