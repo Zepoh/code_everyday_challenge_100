@@ -16,4 +16,48 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background-color: rgb(88, 148, 197);
+}
+
+.body_content{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.image_wrapper{
+    background-color: white;
+    border: solid black 2px;
+    height: 5rem;
+    aspect-ratio: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.dragging{
+    border-style: dashed;
+    /* opacity: .5; */
+}
+
+.dragover{
+    border-color: red;
+    border-style: solid;
+    scale: 1.2;
+    transition: 400ms;
+
+}
+
+.dropping{
+    border: red solid 2px;
+    /* ajoute ici une annimation pour lorsque l'utilisateur drop un item */
+}
+
+
+img{
+    height: 4rem;
+    cursor: grab;
 }
