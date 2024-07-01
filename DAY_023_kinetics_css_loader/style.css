@@ -1,6 +1,10 @@
 :root{
     --color1: white;
-    --color2: rgb(51, 50, 65);
+    --color21: rgb(51, 50, 65);
+    --color22: rgb(81, 79, 107);
+    --timing_function: linear;
+    --timing_function:  cubic-bezier(0.000, 1.220, 1.000, -0.270);
+    /* --timing_function:  cubic-bezier(0.000, 1.220, 0.860, 0.125); */
 }
 
 *{
@@ -11,14 +15,14 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
     height: 100vh;
-    background-color: var(--color2);
+    background-color: var(--color21);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    animation: impactColor 2s  infinite steps(1) ;
 }
 
 .body_wrapper{
@@ -30,7 +34,7 @@ body {
 .triangle{
     height: 3rem;
     aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--color1) 0%, var(--color1)50%, var(--color2)50%, var(--color2)100%);   
+    background: linear-gradient(135deg, var(--color1) 0%, var(--color1)50%, var(--color21)50%, var(--color21)100%);   
     position:absolute ;
     top: 50%;
     left: 50%;
@@ -39,12 +43,25 @@ body {
 }
 
 .one{
-    animation: kineticsLoaderOne 4s linear  infinite;
+    transform: rotate(45deg);
+    animation: kineticsLoaderOne 4s var(--timing_function) infinite;
 }
 
 .two{
+    transform: rotate(-45deg);
+    animation: kineticsLoaderTwo 4s 1s var(--timing_function)  infinite;
+}
 
-    animation: kineticsLoaderTwo 4s 1s linear  infinite;
+@keyframes impactColor {
+    0%{
+      background-color: var(--color22);
+    }
+    50%{
+        background-color: var(--color21);
+    }
+    100%{
+        background-color: var(--color22);
+    }
 }
 
 @keyframes kineticsLoaderTwo {
