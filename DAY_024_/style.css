@@ -1,0 +1,109 @@
+:root{
+    --gris_haut: rgb(245, 245, 245);
+    --gris_bas: rgb(220, 220, 220);
+
+
+    --body_color: rgb(197, 202, 206);
+    --my_linear_gradiant : linear-gradient(90deg, var(--gris_haut) 0%, var(--gris_haut) 35%, var(--gris_bas) 50%, var(--gris_haut) 65%, var(--gris_haut) 100%);
+
+/* linear-gradient(90deg, rgb(245, 245, 245) 0%, rgb(245, 245, 245) 35%, rgb(220, 220, 220) 50%, rgb(245, 245, 245) 65%, rgb(245, 245, 245) 100%); */
+
+    --my_linear_gradiant2 : linear-gradient(90deg, var(--gris_haut) 0%, var(--gris_haut) 5%, var(--gris_bas) 20%, var(--gris_haut) 35%, var(--gris_haut) 100%);
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--body_color);
+}
+
+.body_content{
+    width: fit-content;
+    height: fit-content;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    background-color: white;
+}
+
+.image_card{
+    width: 100%;
+    height: 10rem;
+    background-size: cover;
+    /* background-image: url(./asset/cinema_seat.jpg); */
+
+    background: var(--my_linear_gradiant);
+    background-size: 150%;
+
+    animation: loading 800ms linear infinite ;
+}
+
+.on_loading{
+    background: var(--my_linear_gradiant);
+    background-size: 150%;
+    background-position: 0rem 0%;
+
+    animation: loading 800ms linear infinite  ;
+}
+
+
+.text_card, .profil{
+    margin: .5rem 1rem;
+}
+
+.profil{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.image_profil{
+    height: 3.5rem;
+    aspect-ratio: 1;
+    background-image: url(./asset/zepohBloomGitLogo.png);
+    background-size: cover;
+}
+
+.card h2{
+    font-size: 1.3rem;
+    margin: .5rem 0;
+}
+
+.card h3{
+    font-size: 1rem;
+    margin: .5rem 0;
+}
+.card p{
+    color: rgb(97, 97, 97);
+}
+
+@keyframes loading {
+    0%{
+        background-position: 300% 0%;
+    }
+    100%{
+        background-position: 0rem 0%;
+    }
+}
