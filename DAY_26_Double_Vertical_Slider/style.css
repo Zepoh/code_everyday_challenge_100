@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/* hide scrollbar */
+body {
+    -ms-overflow-style: none;  
+} 
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+main{
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+main > div{
+    position: relative;
+}
+
+main .content_wrapper{
+    transition: 400ms;
+}
+
+main .text{
+    color: white;
+    flex: 1;
+}
+
+main .text .content_wrapper{
+    transform: translateY(-300vh);
+}
+
+main .text .content:nth-child(2n){
+    background-color: rgb(221, 163, 163);
+}
+
+main .text .content:nth-child(2n+1){
+    background-color: rgb(221, 163, 221);
+}
+
+main .text h2{
+    font-size: 2.5rem;
+}
+
+main .button{
+    position: absolute;
+    height: 3rem;
+    font-size: 2rem;
+    width: 3rem;
+    color: black;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.text .button{
+    top: calc(50% + 1.5rem);
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+.image .button{
+    top: calc(50% - 1.5rem);
+    left: 0;
+    border-radius: 0 5px 5px 0 ;
+
+}
+
+main .image{
+    background-color: rgb(196, 212, 255);
+    flex: 2;
+}
+
+main .image .content{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.content_wrapper .content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content_wrapper .button{
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    color: rgb(48, 48, 48);
+    background-color: aliceblue;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/*________________ image____________ */
+
+main .image .content:first-child{
+    background-image: url("../general_asset/image/Mandara_Mountains_from_Yola.jpg");
+}
+
+main .image .content:nth-child(2){
+    background-image: url("../general_asset/image/Mandara_Mountains_panoramio.jpg");
+}
+
+main .image .content:nth-child(3){
+    background-image: url("../general_asset/image/Mont_Mandara.jpg");
+}
+
+main .image .content:nth-child(4){
+    background-image: url("../general_asset/image/Mont_Mandara_01.jpg");
+}
+

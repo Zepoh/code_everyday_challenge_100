@@ -9,7 +9,7 @@ let body = document.querySelector("body");
 
 window.addEventListener("scroll",(event)=>{
     console.log(window.scrollY);
-    if (window.scrollY >= 400) {
+    if (window.scrollY >= 250) {
         nav.classList.add("small")
     } else {
         nav.classList.remove("small")
