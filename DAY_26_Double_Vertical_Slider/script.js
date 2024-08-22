@@ -33,13 +33,14 @@ function update_index(number) {
 }
 
 function display_image() {
+    
+    let translation_image = index_table_S[index_table] * 100
+    let translation_text = index_table_S[ index_table_S.length -1 -index_table] * 100
+
     console.log("index actuel : ", index_table);
     console.log("translation_image : ", translation_image);
 
-    let translation_image = index_table_S[index_table] * 100
-    let translation_text = index_table_S[ index_table_S.length -1 -index_table] * 100
     block_image.style.transform = `translateY(-${translation_image}vh)`
-
     block_text.style.transform = `translateY(-${translation_text}vh)`
 
 }
