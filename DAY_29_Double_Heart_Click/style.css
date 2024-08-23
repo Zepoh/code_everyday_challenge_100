@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main{
+    max-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+h2{
+    font-size: .8rem;
+}
+
+em{
+    font-style: normal;
+}
+p{
+    font-size: .7rem;
+}
+
+.image{
+    height: 20rem;
+    aspect-ratio: 2/3;
+    background-image: url("../pexels-adrien-olichon-1257089-3709370.jpg");
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+i{
+    color: red;
+}
+
+.image i{
+    position:absolute;
+    animation: none;
+    display: none;
+    
+}
+
+.image .annimated{
+    animation: dbclick_animation 2s ease-out  1  forwards;
+    display: block;
+} 
+
+@keyframes dbclick_animation {
+    0%{
+        transform: scale(100%);
+    }
+    35%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(500%);
+        opacity: 0;
+    }
+}
+
+
