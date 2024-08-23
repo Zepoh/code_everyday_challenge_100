@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+:root{
+    --color_1: rgb(80, 44, 128);
+    --color_2: rgb(24, 131, 21);
+    --color_3: rgb(124, 2, 108);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--color_1);
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.button button{
+    padding: .8rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--color_1);
+
+}
+
+.Notifaction-wrapper{
+    position: absolute;
+    right:0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: 1rem;
+}
+
+.notifation{
+    background-color: white;
+    height: 3rem;
+    width: 10rem;
+    font-size: .9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.model-notification{
+    display: none;
+}
+
+.notifation_color1{
+    color: var(--color_1);
+}
+.notifation_color2{
+    color: var(--color_2);
+}
+.notifation_color3{
+    color: var(--color_3);
+}
