@@ -8,15 +8,12 @@ let sentence_ready = "";
 animated_sentence.innerText = "";
 let i = 0;
 
-
-
 let myIntervalID = setInterval(auto_write, inteval_default);
 
 input.addEventListener("change", () => {
   let value = input.value;
   update_interval(value);
 });
-
 
 
 function reload_auto_write(params) {
