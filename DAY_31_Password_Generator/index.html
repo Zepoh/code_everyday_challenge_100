@@ -11,35 +11,36 @@
       <div class="main__wrapper">
         <h3>Password Generator</h3>
         <div class="main__display_password">
-          <input type="text">
+          <input type="text" />
+          <div class="main__cliboard_button">
+            <img src="./asset/icons/clipboard-svgrepo-com.svg" alt="">
+          </div>
         </div>
         <div class="main__password_parameter">
           <p>Password Length</p>
-          <input type="number">
+          <input type="number" min="4" max="30" value="4"/>
         </div>
         <div class="main__password_parameter">
           <p>Include uppercase letters</p>
-          <input type="checkbox">
+          <input type="checkbox" />
         </div>
         <div class="main__password_parameter">
           <p>Include lowercase letters</p>
-          <input type="checkbox">
+          <input type="checkbox" />
         </div>
         <div class="main__password_parameter">
           <p>Include numbers</p>
-          <input type="checkbox">
+          <input type="checkbox" />
         </div>
         <div class="main__password_parameter">
           <p>Include symbols</p>
-          <input type="checkbox">
+          <input type="checkbox" />
         </div>
         <div class="main__generate_password">
-          <input type="button" value="Generate password"> 
-          <button>Generate password</button>
+          <input type="button" value="Generate password" />
         </div>
       </div>
     </main>
-
     <script src="script.js"></script>
   </body>
 </html>
