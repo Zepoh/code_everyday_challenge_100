@@ -71,8 +71,6 @@ body {
   position: absolute;
   left: 0px  ;
   animation: reverse_slide_animation 400ms ease-in-out  1  forwards;
-  
-  /* transition: all 400ms ease-in-out; */
 }
 
 .active .toggle_button {

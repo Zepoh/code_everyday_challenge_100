@@ -1,4 +1,4 @@
-let criteria_S = document.querySelectorAll(".criteria");
+const criteria_S = document.querySelectorAll(".criteria");
 
 for (let index = 0; index < criteria_S.length; index++) {
   const criteria = criteria_S[index];
@@ -11,7 +11,7 @@ for (let index = 0; index < criteria_S.length; index++) {
         i++;
       }
     });
-    if (i == 3) {
+    if (i == criteria_S.length) {
       if (index == criteria_S.length - 1) {
         criteria_S[0].classList.remove("active");
       } else {
