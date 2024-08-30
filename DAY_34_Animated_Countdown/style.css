@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --animation_zoom_in: zoom_in 300ms ease-in;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.paused .main__counter_paused {
+  display: flex; /* main__counter_paused appears only  when element main  have class "paused" */
+  animation: var(--animation_zoom_in);
+}
+
+.main__counter_paused {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main__counter_paused p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.main__counter_paused input {
+  padding: 0.1rem 0.8rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.paused .main__counter_progress {
+  display: none; /* main__counter_progress disappear  when element main have class "paused" */
+}
+
+.main__counter_progress {
+  animation: var(--animation_zoom_in);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10rem;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.main__counter_progress p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.main__counter_progress div {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 10rem;
+  height: 4rem;
+  /* background-color: antiquewhite; */
+  position: relative;
+  overflow: hidden;
+}
+
+.main__counter_progress em {
+  font-size: 3rem;
+  width: 4.5rem;
+  font-style: normal;
+  font-weight: initial;
+  color: rgb(56, 122, 207);
+  position: absolute;
+  right: calc(50% - 4.5rem / 2);
+  bottom: 0;
+  transform-origin: 50% calc(100% + 2rem);
+  animation: animation_rotate 1000ms ease-in infinite;
+  /* background-color: cadetblue; */
+}
+
+@keyframes zoom_in {
+  0% {
+    transform: scale(10%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes animation_rotate {
+  0% {
+    transform: rotate(100deg);
+  }
+  15% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-100deg);
+  }
+}
