@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root{
+    --timing_function_light : cubic-bezier(0.000, 1.230, 1.000, 0.525);
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgb(29, 29, 29);
+}
+
+.main__hoverboard {
+  /* width: 20rem;
+  height: 25rem; */
+  display: grid;
+  gap: .2rem;
+  grid-template-columns: repeat(20, 1fr);
+}
+
+.main__hoverboard .case {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: rgb(48, 48, 48);
+  color: rgb(81, 255, 0); /* test pour les couleurs */
+  transition: 2500ms  var(--timing_function_light);
+}
+
+
+.main__hoverboard .case:hover{
+    background-color: cadetblue;
+    transition: none;
+    box-shadow: 0px 0px 6px 1px cadetblue;
+    
+}
