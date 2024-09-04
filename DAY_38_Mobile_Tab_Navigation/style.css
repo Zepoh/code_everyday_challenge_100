@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --color_violet_up: #b288c4;
+  --color_violet_down: #8549a2;
+  --color_gray: gray;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color_violet_up);
+}
+
+.main__mobile {
+  background-color: white;
+  padding: 0.2rem;
+  border-radius: 0.9rem;
+}
+
+.main__mobile .mobile_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.main__mobile .image {
+  height: 25rem;
+  width: 15rem;
+  background-image: url(./asset/image/house.jpg);
+  background-position: center;
+  background-size: cover;
+  animation-name: fading;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes fading {
+    0%{
+        filter: brightness(20%);
+    }
+    100%{
+        filter: brightness(100%);
+    }
+}
+
+@keyframes fading2 {
+    0%{
+        filter: brightness(20%);
+    }
+    100%{
+        filter: brightness(100%);
+    }
+}
+
+.main__mobile .control {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.main__mobile .control .button {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__mobile .control .button:hover *{
+    color: var(--color_violet_down);
+}
+
+.main__mobile .control .button i {
+  color: var(--color_gray);
+}
+.main__mobile .control .button p {
+  font-size: 0.7rem;
+  color: var(--color_gray);
+}
+
+.main__mobile .control .active i {
+  color: var(--color_violet_down);
+}
+
+.main__mobile .control .active p {
+  color: var(--color_violet_down);
+}
