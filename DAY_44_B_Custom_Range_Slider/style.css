@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --length_range_slider: 15rem;
+  --length_slider: 5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgb(52, 51, 88);
+  background: linear-gradient(
+    0deg,
+    rgba(52, 51, 88, 1) 0%,
+    rgba(91, 91, 185, 1) 9%,
+    rgba(80, 161, 204, 1) 100%
+  );
+}
+
+h1 {
+  position: absolute;
+  top: 2rem;
+}
+
+.range_slider {
+  position: relative;
+}
+
+.range_slider .range {
+  background-color: blueviolet;
+  width: var(--length_range_slider);
+  height: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.range_slider .slider {
+  width: var(--length_slider);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transform: translateX(
+    calc((var(--length_range_slider) * 50 / 100) - (var(--length_slider) / 2))
+  );
+  position: relative;
+  top: calc(1rem);
+}
+
+.range_slider .slider .value {
+  width: inherit;
+  padding: 0.3rem 0;
+  background-color: white;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 0px black;
+}
+
+.range_slider .circle {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid blueviolet;
+  background-color: white;
+}
+
+.range_slider .circle:hover {
+  cursor: pointer;
+}

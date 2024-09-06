@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --length_range_slider: 15rem;
+  --length_slider: 4rem;
+  --length_thumb_slider: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgb(52, 51, 88);
+  background: linear-gradient(
+    0deg,
+    rgba(52, 51, 88, 1) 0%,
+    rgb(119, 119, 219) 9%,
+    rgb(108, 189, 233) 100%
+  );
+}
+
+h1 {
+  position: absolute;
+  top: 5rem;
+}
+
+.range_slider {
+  width: var(--length_range_slider);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.range_slider .screen {
+  background-color: white;
+  width: var(--length_slider);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.459);
+  padding: 0.2rem 0rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(
+    calc((var(--length_range_slider) * 50 / 100) - (var(--length_slider) / 2))
+  );
+}
+
+.range_slider input {
+  width: inherit;
+}
+
+/* ========================inport code ==================== */
+
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: var(--length_range_slider);
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #813d9c;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: var(--length_thumb_slider);
+  width: var(--length_thumb_slider);
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 1px solid #813d9c;
+  outline-offset: 0rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #813d9c;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: #ffffff;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 50%;
+  height: var(--length_thumb_slider);
+  width: var(--length_thumb_slider);
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: 1px solid #813d9c;
+  outline-offset: 0rem;
+}
