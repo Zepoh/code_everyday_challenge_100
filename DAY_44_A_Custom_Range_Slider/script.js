@@ -1,6 +1,7 @@
 const range_slider = document.querySelector(".range_slider");
 const input_range_slider = document.querySelector("#input_slider");
 const input_range_screen = document.querySelector(".range_slider .screen");
+const length_thumb_slider = 1;
 
 console.log(input_range_screen);
 
@@ -24,6 +25,6 @@ function update_input_sceen(value) {
 
   console.log("offset_value : ", offset_value);
   input_range_screen.style.transform = `translateX(
-    calc((var(--length_range_slider) * ${value} / 100) - (var(--length_slider) / 2) + ${(offset_value / 100) * 1}rem)
+    calc((var(--length_range_slider) * ${value} / 100) - (var(--length_slider) / 2) + ${(offset_value / 100) * length_thumb_slider}rem)
   )`;
 }

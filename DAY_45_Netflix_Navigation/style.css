@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --length_of_navbar_size_desktop: 25rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main img {
+  height: 5rem;
+}
+
+.navbar {
+  position: absolute;
+  left: calc(-1 * var(--length_of_navbar_size_desktop));
+  top: 0;
+  height: 100vh;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  transition: 400ms ease-out;
+  transition-delay: 800ms;
+}
+
+.navbar .wrapper {
+  width: var(--length_of_navbar_size_desktop);
+  height: 100vh;
+
+  background-color: transparent;
+  position: relative;
+}
+
+.navbar .background {
+  height: 100vh;
+  width: var(--length_of_navbar_size_desktop);
+  position: absolute;
+  transform: translateX(calc(-1 * var(--length_of_navbar_size_desktop)));
+
+  transition: 400ms ease-out;
+}
+
+.active .background {
+  /* tres mauvaise nomenclature  */
+
+  transform: translateX(0rem);
+}
+
+.navbar .nabar__container {
+  background-color: white;
+  left: -2rem;
+  z-index: 3;
+  padding-left: 4rem;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  transition-delay: 0ms;
+}
+
+.navbar .nabar__container .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    width: 10rem;
+  }
+  i {
+    border: 1px solid red;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+.navbar .nabar__container nav ul {
+  list-style: none;
+  margin-left: 1rem;
+
+  li {
+    margin-top: 1rem;
+  }
+}
+
+.navbar .nabar__container nav a {
+  text-decoration: none;
+}
+
+.navbar .background1 {
+  background-color: #e50914;
+  left: -1rem;
+  z-index: 2;
+  transition-delay: 200ms;
+}
+
+.navbar .background2 {
+  background-color: rgb(53, 53, 53);
+  z-index: 1;
+  transition-delay: 400ms;
+
+}
+
+.active {
+  /* tres mauvaise nomenclature  */
+  left: 0;
+  transition: 400ms ease-out;
+  transition-delay: 0ms;
+  .menu_burger {
+    display: none;
+  }
+}
+
+.active  .nabar__container{
+    transition-delay: 400ms;
+}
+
+.active  .background1{
+    transition-delay: 200ms;
+}
+
+.active  .background2{
+    transition-delay: 0ms;
+}
+
+.navbar .menu_burger {
+  margin: 1rem;
+  width: fit-content;
+}

@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+
+
+/* this is a link of a website to stylize an input range 
+https://range-input-css.netlify.app/
+*/
+
+
 :root {
   --length_range_slider: 15rem;
   --length_slider: 4rem;
